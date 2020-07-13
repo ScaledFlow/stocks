@@ -1,0 +1,21 @@
+{
+    "development": {
+      "username": "root",
+      "password": "Timber8293$@",
+      "database": "stocks",
+      "host": "127.0.0.1",
+      "port": 3306,
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": "",
+      "database": "",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "use_env_variable": "JAWSDB_URL",
+      "dialect": "mysql"
+    }
+  }
