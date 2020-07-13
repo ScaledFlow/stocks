@@ -6,13 +6,9 @@ const stock = require("../models/stock.js");
 
 var stocks = [
   {
-    stockTicker: "F",
-    stockPrice: "6",
+    gld: "1810.23",
+    btc: "9250.23",
   },
-  // {
-  //   stockTicker: "TSLA",
-  //   stockPrice: "1689",
-  // },
 ];
 
 
@@ -32,7 +28,7 @@ router.get("/", function (req, res) {
     // Lucky for us, animals[0] is an object!
   
     // 1. send the dog object from the animals array to the dog handlebars file.
-    console.log(stocks[0].stockTicker);
+    console.log(stocks);
     
     res.render("stock", stocks[0]);
   });
