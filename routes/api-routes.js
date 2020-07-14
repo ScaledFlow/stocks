@@ -5,3 +5,7 @@ console.log("-- routes/api-routes.js");// **************************************
 // Dependencies
 // =============================================================
 var Stocks = require("../models/stock.js");
+
+module.exports = function(app) {
+
+}

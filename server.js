@@ -11,16 +11,12 @@ var express = require("express");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-var app = express();
-
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
 
 // // Old Way
 // // =============================================================
@@ -36,19 +32,14 @@ app.use(express.json());
 
 // Routes
 // =============================================================
-// require("./routes/api-routes.js")(app);
- require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 // Set Handlebars
 // =============================================================
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
-
-
-
-
 
 
 app.listen(PORT, function () {
