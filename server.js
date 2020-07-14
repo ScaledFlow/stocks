@@ -22,29 +22,28 @@ app.use(express.json());
 
 
 
-// Old Way
-// =============================================================
-// Set Handlebars.
-var exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-// Import routes and give the server access to them.
-var routes = require("./controllers/stocks_controller.js");
-app.use(routes);
-
-
-// // Routes
+// // Old Way
 // // =============================================================
-// require("./routes/api-routes.js")(app);
-// require("./constrollers/html-routes.js")(app);
-
-
-// // Set Handlebars
-// // =============================================================
+// // Set Handlebars.
 // var exphbs = require("express-handlebars");
 // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 // app.set("view engine", "handlebars");
+
+// // Import routes and give the server access to them.
+// var routes = require("./controllers/stocks_controller.js");
+// app.use(routes);
+
+
+// Routes
+// =============================================================
+// require("./routes/api-routes.js")(app);
+ require("./routes/html-routes.js")(app);
+
+// Set Handlebars
+// =============================================================
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 
 
