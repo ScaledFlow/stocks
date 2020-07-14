@@ -1,7 +1,5 @@
 console.log("-- models/stock.js");
 
-// const orm = require("../config/orm.js");
-
 // Dependencies
 // =============================================================
 
@@ -10,7 +8,7 @@ var Sequelize = require("sequelize");
 // sequelize (lowercase) references my connection to the DB.
 var sequelize = require("../config/connection.js");
 
-// Creates a "Book" model that matches up with DB
+// Creates a "Stock" model that matches up with DB
 var Stock = sequelize.define("stocks", {
   ticker: Sequelize.STRING,
   company: Sequelize.STRING,
@@ -20,10 +18,14 @@ var Stock = sequelize.define("stocks", {
 // Syncs with DB
 Stock.sync();
 
-// Makes the Book Model available for other files (will also create a table)
+// Creates a "User" model that matches up with DB
+var Stock = sequelize.define("users", {
+    email: Sequelize.STRING,
+    password: Sequelize.STRING,
+  });
+  
+  // Syncs with DB
+  Stock.sync();
+
+
 module.exports = Stock;
-
-
-
-
-// module.exports = stock;

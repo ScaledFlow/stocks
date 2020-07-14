@@ -1,0 +1,1 @@
+console.log("-- public/assets/js/stock.js")
