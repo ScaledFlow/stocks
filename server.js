@@ -20,19 +20,35 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+
+// Old Way
+// =============================================================
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-
 // Import routes and give the server access to them.
 var routes = require("./controllers/stocks_controller.js");
-
-// // console.log("rountes");
-// // console.log(routes);
-
 app.use(routes);
+
+
+// // Routes
+// // =============================================================
+// require("./routes/api-routes.js")(app);
+// require("./constrollers/html-routes.js")(app);
+
+
+// // Set Handlebars
+// // =============================================================
+// var exphbs = require("express-handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
+
+
+
+
 
 
 

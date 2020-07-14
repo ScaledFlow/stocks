@@ -17,9 +17,8 @@ router.get("/", function (req, res) {
     console.log("-- stock_controller - router.get /");
     console.log(stocks);
 
-    res.render("index", stocks);
+    res.render("login", stocks);
   });
-
 
   router.get("/stock", function (req, res) {
     console.log("-- stock_controller - router.get /stock");
@@ -32,5 +31,8 @@ router.get("/", function (req, res) {
     
     res.render("stock", stocks[0]);
   });
+
+
+
 
 module.exports = router;
